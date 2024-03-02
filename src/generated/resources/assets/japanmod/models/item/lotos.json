@@ -1,0 +1,18 @@
+{
+  "parent": "japanmod:block/lotos",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent":"japanmod:block/lotos"
+  },
+  "perspectives": {
+          "gui":{
+            "parent": "japanmod:item/lotos_2d"
+          },
+    "ground":{
+      "parent": "japanmod:item/lotos_2d"
+    },
+    "fixed":{
+      "parent": "japanmod:item/lotos_2d"
+    }
+  }
+}

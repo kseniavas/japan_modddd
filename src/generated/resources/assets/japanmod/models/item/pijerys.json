@@ -1,0 +1,6 @@
+{
+  "parent": "japanmod:block/pijerys",
+  "textures": {
+    "layer0": "japanmod:block/pijerys"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "render_type": "translucent",
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "japanmod:block/maple_log_top",
+    "side": "japanmod:block/maple_log"
+  }
+}
