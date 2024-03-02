@@ -1,0 +1,6 @@
+{
+  "parent": "japanmod:block/gibiskus",
+  "textures": {
+    "layer0": "japanmod:/gibiskus"
+  }
+}

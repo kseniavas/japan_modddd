@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bowl"
+    },
+    "B": {
+      "item": "japan_plants_mod:rice"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "#B#",
+    "###"
+  ],
+  "result": {
+    "item": "japan_plants_mod:ricebowl"
+  },
+  "show_notification": true
+}

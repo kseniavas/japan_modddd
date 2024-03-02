@@ -1,0 +1,7 @@
+{
+  "render_type": "translucent",
+  "parent": "block/cross",
+  "textures": {
+    "cross": "japanmod:block/gibiskus"
+  }
+}

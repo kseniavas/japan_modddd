@@ -1,0 +1,7 @@
+{
+  "render_type": "translucent",
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "japanmod:block/rice_stage1"
+  }
+}
