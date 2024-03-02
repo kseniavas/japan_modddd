@@ -1,0 +1,7 @@
+{
+  "render_type": "translucent",
+  "parent": "japanmod:block/maple_log",
+  "textures": {
+    "layer0": "japanmod:block/maple_log"
+  }
+}
