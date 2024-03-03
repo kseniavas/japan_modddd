@@ -47,7 +47,7 @@ public static final RegistryObject<Block> MAPLE_LOG = BLOCKS.register("maple_log
                     BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
-    public static final RegistryObject<Block> LOTOS = registerBlock("lotos",
+    public static final RegistryObject<Block> LOTOS = BLOCKS.register("lotos",
             () -> new LotosBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).instabreak().sound(SoundType.LILY_PAD).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
