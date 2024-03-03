@@ -104,7 +104,7 @@ public class Japan_mod {
             event.accept(ModItems.RICE_BOWL);
         }
         if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModBlocks.LOTOS);
+            event.accept(ModItems.LOTOS);
         }
         if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.MAPLE_LOG);
