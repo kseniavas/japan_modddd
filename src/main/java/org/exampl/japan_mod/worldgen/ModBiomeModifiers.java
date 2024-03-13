@@ -15,11 +15,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.exampl.japan_mod.Japan_mod;
 
 public class ModBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> PIJERYS_BIOME_MODIFIER = registerKey("pijerys_biome_modifier");
+    public static final ResourceKey<BiomeModifier> MODFLOWERS_BIOME_MODIFIER = registerKey("pijerys_biome_modifier");
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
-        context.register(PIJERYS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier((biomes.getOrThrow(Tags.Biomes.IS_PLAINS)), HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.PIJERYS_PLACED_KEY)), GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(MODFLOWERS_BIOME_MODIFIER, new ForgeBiomeModifiers.AddFeaturesBiomeModifier((biomes.getOrThrow(Tags.Biomes.IS_PLAINS)), HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MODFLOWERS_PLACED_KEY)), GenerationStep.Decoration.VEGETAL_DECORATION));
     }
     private static ResourceKey<BiomeModifier> registerKey(String name){
             return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(Japan_mod.MODID, name));
