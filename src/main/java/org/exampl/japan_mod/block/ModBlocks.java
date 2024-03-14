@@ -4,9 +4,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.AcaciaTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,7 +12,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.exampl.japan_mod.Japan_mod;
-import org.exampl.japan_mod.block.custom.LotosBlock;
 import org.exampl.japan_mod.block.custom.ModFlammableRotatedPillarBlock;
 import org.exampl.japan_mod.block.custom.RiceBlock;
 import org.exampl.japan_mod.item.ModItems;
@@ -48,7 +45,7 @@ public static final RegistryObject<Block> MAPLE_LOG = BLOCKS.register("maple_log
 
 
     public static final RegistryObject<Block> LOTOS = BLOCKS.register("lotos",
-            () -> new LotosBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).instabreak().sound(SoundType.LILY_PAD).noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new WaterlilyBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).instabreak().sound(SoundType.LILY_PAD).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
 
