@@ -102,12 +102,23 @@ public class Japan_mod {
 
         if(event.getTabKey()==CreativeModeTabs.FOOD_AND_DRINKS){
             event.accept(ModItems.RICE_BOWL);
+
         }
         if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.LOTOS);
+
         }
         if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.MAPLE_LOG);
+        }
+        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.MAPLE_LEAVES);
+        }
+        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.MAPLE_WOOD);
+        }
+        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.MAPLE_SAPLING);
         }
 
     }
