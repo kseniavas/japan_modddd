@@ -31,10 +31,11 @@ public class FireflyEntity extends Animal implements NeutralMob, FlyingAnimal {
     }
     public static AttributeSupplier.Builder createAttrinutes(){
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 10.0D)
-                .add(Attributes.FLYING_SPEED, (double)0.6F)
-                .add(Attributes.MOVEMENT_SPEED, (double)0.3F)
-                .add(Attributes.FOLLOW_RANGE, 48.0D);
+                .add(Attributes.MAX_HEALTH, 2.0D)
+                .add(Attributes.FLYING_SPEED, 0.4F)
+                .add(Attributes.MOVEMENT_SPEED, 0.3F)
+                .add(Attributes.FOLLOW_RANGE, 48.0D)
+                .add(Attributes.KNOCKBACK_RESISTANCE,1.0F);
     }
 
     @Nullable
@@ -68,7 +69,6 @@ public class FireflyEntity extends Animal implements NeutralMob, FlyingAnimal {
     public void setPersistentAngerTarget(@Nullable UUID pPersistentAngerTarget) {
 
     }
-
     @Override
     public void startPersistentAngerTimer() {
 

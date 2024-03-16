@@ -35,6 +35,7 @@ import org.exampl.japan_mod.block.ModBlocks;
 import org.exampl.japan_mod.entity.ModEntities;
 import org.exampl.japan_mod.entity.client.FireflyRenderer;
 import org.exampl.japan_mod.entity.custom.FireflyEntity;
+import org.exampl.japan_mod.item.ModCreativeTabs;
 import org.exampl.japan_mod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -60,6 +61,7 @@ public class Japan_mod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         ModEntities.register(modEventBus);
@@ -69,7 +71,6 @@ public class Japan_mod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -102,12 +103,23 @@ public class Japan_mod {
 
         if(event.getTabKey()==CreativeModeTabs.FOOD_AND_DRINKS){
             event.accept(ModItems.RICE_BOWL);
+
         }
         if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModItems.LOTOS);
+            event.accept(ModBlocks.LOTOS);
+
         }
         if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.MAPLE_LOG);
+        }
+        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.MAPLE_LEAVES);
+        }
+        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.MAPLE_WOOD);
+        }
+        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.MAPLE_SAPLING);
         }
 
     }
