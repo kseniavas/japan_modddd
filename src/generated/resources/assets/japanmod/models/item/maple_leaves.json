@@ -1,0 +1,7 @@
+{
+  "render_type": "translucent",
+  "parent": "japanmod:block/maple_leaves",
+  "textures": {
+    "layer0": "japanmod:block/maple_leaves"
+  }
+}

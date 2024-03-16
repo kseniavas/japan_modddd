@@ -14,13 +14,15 @@ import org.exampl.japan_mod.worldgen.ModPlacedFeatures;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class ModWorldgenDataProvider extends DatapackBuiltinEntriesProvider {
-    public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder().add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap).add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap).add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
+    public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
 
-        public ModWorldgenDataProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-    super(output,
-        registries,
-        BUILDER,
-        Set.of(Japan_mod.MODID));
-        }
+            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
+            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+
+
+    public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, registries, BUILDER, Set.of(Japan_mod.MODID));
+    }
 }

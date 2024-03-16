@@ -1,6 +1,6 @@
 package org.exampl.japan_mod.item;
 
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -8,6 +8,7 @@ import org.exampl.japan_mod.Japan_mod;
 
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,8 +31,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl",
             () -> new Item(new Item.Properties().food(ModFoods.RICE_BOWL)));
-
-    public static final RegistryObject<BlockItem> LOTOS = ITEMS.register("lotos", () -> new PlaceOnWaterBlockItem(ModBlocks.LOTOS.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

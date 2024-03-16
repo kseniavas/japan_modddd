@@ -1,6 +1,11 @@
 package org.exampl.japan_mod.block.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.player.Player;
@@ -20,7 +25,7 @@ import net.minecraft.world.level.material.Fluids;
 import org.exampl.japan_mod.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
-public class RiceBlock extends CropBlock implements BonemealableBlock, LiquidBlockContainer {
+public class RiceBlock extends CropBlock implements LiquidBlockContainer {
     public static final int MAX_AGE = 2;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
     public RiceBlock(Properties pProperties) {
@@ -79,6 +84,7 @@ public class RiceBlock extends CropBlock implements BonemealableBlock, LiquidBlo
         BlockPos blockpos = pPos.below();
         return this.mayPlaceOn(pLevel.getBlockState(blockpos), pLevel, blockpos);
     }
+
 
 }
 
