@@ -46,7 +46,7 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
-    public static final RegistryObject<Block> LOTOS = registerBlock("lotos",
+    public static final RegistryObject<Block> LOTOS = BLOCKS.register("lotos",
             () -> new LotosBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).instabreak().sound(SoundType.LILY_PAD).noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     public static final RegistryObject<Block> MAPLE_LOG = registerBlock("maple_log",
@@ -94,6 +94,11 @@ public class ModBlocks {
             });
     public static final RegistryObject<Block> MAPLE_SAPLING = registerBlock("maple_sapling",
             () -> new SaplingBlock(new MapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> GLICINIYA_LOG = registerBlock("gliciniya_log", ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(ModBlocks.MAPLE_LOG.get())));
+    public static final RegistryObject<Block> GLICINIYA_WOOD = registerBlock("gliciniya_wood", ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(ModBlocks.MAPLE_WOOD.get())));
+    public static final RegistryObject<Block> GLICINIYA_PLANK = registerBlock("gliciniya_planks", ()-> new Block(BlockBehaviour.Properties.copy(ModBlocks.MAPLE_PLANKS.get())));
+   // public static final RegistryObject<Block> GLICINIYA_SAPLING = registerBlock("gliciniya_sapling", ()-> new SaplingBlock(GliciniyaTreeGrower, BlockBehaviour.Properties.copy(ModBlocks.MAPLE_SAPLING.get())));
 
 
 

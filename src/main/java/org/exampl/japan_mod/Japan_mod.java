@@ -35,6 +35,7 @@ import org.exampl.japan_mod.block.ModBlocks;
 import org.exampl.japan_mod.entity.ModEntities;
 import org.exampl.japan_mod.entity.client.FireflyRenderer;
 import org.exampl.japan_mod.entity.custom.FireflyEntity;
+import org.exampl.japan_mod.item.ModCreativeTabs;
 import org.exampl.japan_mod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -49,7 +50,7 @@ import org.exampl.japan_mod.entity.ModEntities.*;
 public class Japan_mod {
 
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "japan_mod";
+    public static final String MODID = "japanmod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "japan_mod" namespace
