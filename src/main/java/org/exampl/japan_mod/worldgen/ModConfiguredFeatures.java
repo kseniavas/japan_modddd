@@ -28,10 +28,10 @@ public class ModConfiguredFeatures {
     }
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
-        register(context, MODFLOWERS_KEY, Feature.FLOWER, new RandomPatchConfiguration(126,
+        register(context, MODFLOWERS_KEY, Feature.RANDOM_PATCH, new RandomPatchConfiguration(126,
                 8,
                 4,
-                PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0,1.0D), 0.015F, List.of(ModBlocks.PIJERYS.get().defaultBlockState(), ModBlocks.GIBISKUS.get().defaultBlockState()))))));
+                PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new NoiseProvider(2345L, new NormalNoise.NoiseParameters(0,1.0D), 0.5F, List.of(ModBlocks.PIJERYS.get().defaultBlockState(), ModBlocks.GIBISKUS.get().defaultBlockState()))))));
     }
         private static <FC extends FeatureConfiguration, F extends Feature<FC>>void register
         (BootstapContext < ConfiguredFeature < ?, ?>>context, ResourceKey < ConfiguredFeature < ?, ?>>key, F feature, FC

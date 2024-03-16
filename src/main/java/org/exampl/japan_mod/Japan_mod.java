@@ -35,6 +35,7 @@ import org.exampl.japan_mod.block.ModBlocks;
 import org.exampl.japan_mod.entity.ModEntities;
 import org.exampl.japan_mod.entity.client.FireflyRenderer;
 import org.exampl.japan_mod.entity.custom.FireflyEntity;
+import org.exampl.japan_mod.item.ModCreativeTabs;
 import org.exampl.japan_mod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -49,7 +50,7 @@ import org.exampl.japan_mod.entity.ModEntities.*;
 public class Japan_mod {
 
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "japanmod";
+    public static final String MODID = "japan_mod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "japan_mod" namespace
@@ -60,6 +61,7 @@ public class Japan_mod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         ModEntities.register(modEventBus);
@@ -69,9 +71,6 @@ public class Japan_mod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -80,43 +79,6 @@ public class Japan_mod {
 
     }
 
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModBlocks.PIJERYS);
-        }
-
-        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModBlocks.GIBISKUS);
-        }
-
-        if(event.getTabKey()==CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.RICE_SEEDS);
-        }
-
-
-        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModItems.RICE);
-        }
-
-        if(event.getTabKey()==CreativeModeTabs.FOOD_AND_DRINKS){
-            event.accept(ModItems.RICE_BOWL);
-        }
-        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModItems.LOTOS);
-        }
-        if(event.getTabKey()==CreativeModeTabs.NATURAL_BLOCKS){
-            event.accept(ModBlocks.MAPLE_LOG);
-        }
-
-    }
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("HELLO from server starting");
-
-    }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

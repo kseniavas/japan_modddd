@@ -10,7 +10,7 @@ import org.exampl.japan_mod.entity.custom.FireflyEntity;
 
 public class FireflyRenderer extends MobRenderer<FireflyEntity, FireflyModel<FireflyEntity>> {
     public FireflyRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new FireflyModel<>(pContext.bakeLayer(ModModelLayers.FIREFLY_LAYER)), 2f);
+        super(pContext, new FireflyModel<>(pContext.bakeLayer(ModModelLayers.FIREFLY_LAYER)), 0f);
     }
 
     @Override

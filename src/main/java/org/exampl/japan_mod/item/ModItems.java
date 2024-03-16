@@ -30,6 +30,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> RICE_BOWL = ITEMS.register("rice_bowl",
             () -> new Item(new Item.Properties().food(ModFoods.RICE_BOWL)));
+
     public static final RegistryObject<BlockItem> LOTOS = ITEMS.register("lotos", () -> new PlaceOnWaterBlockItem(ModBlocks.LOTOS.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){
