@@ -16,7 +16,7 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Japan_mod.MODID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("japan_tab",
+    public static final RegistryObject<CreativeModeTab> JAPAN_TAB = CREATIVE_MODE_TABS.register("japan_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RICE.get()))
                     .title(Component.translatable("japan_mod.japan_tab"))
                     .displayItems((pParameters, pOutput) -> {

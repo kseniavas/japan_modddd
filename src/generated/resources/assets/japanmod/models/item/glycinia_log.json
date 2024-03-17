@@ -1,0 +1,7 @@
+{
+  "render_type": "translucent",
+  "parent": "japanmod:block/glycinia_log",
+  "textures": {
+    "layer0": "japanmod:block/glycinia_log"
+  }
+}

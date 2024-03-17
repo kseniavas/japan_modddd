@@ -26,6 +26,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GLYCINIA_KEY = registerKey("glycinia");
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
 
 
@@ -35,6 +36,16 @@ public class ModConfiguredFeatures {
                 new StraightTrunkPlacer(5, 4, 3),
 
                 BlockStateProvider.simple(ModBlocks.MAPLE_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+
+        register(context, GLYCINIA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.GLYCINIA_LOG.get()),
+                new StraightTrunkPlacer(5, 4, 3),
+
+                BlockStateProvider.simple(ModBlocks.GLYCINIA_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());

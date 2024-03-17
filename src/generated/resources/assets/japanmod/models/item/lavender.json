@@ -1,0 +1,6 @@
+{
+  "parent": "japanmod:block/lavender",
+  "textures": {
+    "layer0": "japanmod:/lavender"
+  }
+}

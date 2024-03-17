@@ -1,3 +1,6 @@
 {
-  "item.japan_mod.someitem": "Some Item"
+  "item.japanmod.someitem": "Some Item",
+  "item.japanmod.rice": "Колос риса",
+  "block.japanmod.gibiskus": "Гибискус",
+  "block.japanmod.pijerys": "Пиерис"
 }

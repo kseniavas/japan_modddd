@@ -15,6 +15,7 @@ import org.exampl.japan_mod.Japan_mod;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_MAPLE = registerKey("add_tree_maple");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_GLYCINIA = registerKey("add_tree_glycinia");
 
 
 
@@ -25,6 +26,10 @@ public class ModBiomeModifiers {
         context.register(ADD_TREE_MAPLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MAPLE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_TREE_GLYCINIA, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GLYCINIA_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
 

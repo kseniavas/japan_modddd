@@ -21,6 +21,7 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
+    public static final ResourceKey<PlacedFeature> GLYCINIA_PLACED_KEY = registerKey("glycinia_placed");
 
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
@@ -29,6 +30,10 @@ public class ModPlacedFeatures {
         register(context, MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.MAPLE_SAPLING.get()));
+        register(context, GLYCINIA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GLYCINIA_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.GLYCINIA_SAPLING.get()));
+
 
 
     }

@@ -1,0 +1,9 @@
+
+{
+  "render_type": "translucent",
+  "render_type": "translucent",
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "japanmod:block/glycinia_sapling"
+  }
+}

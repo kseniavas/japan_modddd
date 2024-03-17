@@ -1,0 +1,8 @@
+{
+  "render_type": "translucent",
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "japanmod:block/glycinia_log_top",
+    "side": "japanmod:block/glycinia_log"
+  }
+}
